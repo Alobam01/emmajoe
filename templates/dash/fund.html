@@ -1,0 +1,210 @@
+
+
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+                <div class="nk-content nk-content-fluid">
+                    <div class="container-xl wide-lg">
+                        <div class="nk-content-body">
+                            <div class="buysell wide-xs m-auto">
+                                <div class="buysell-nav text-center">
+                                    <ul class="nk-nav nav nav-tabs nav-tabs-s2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Make Deposit</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/my-trades/">Deposit History</a>
+                                        </li>
+                                    </ul>
+                                </div><!-- .buysell-nav -->
+                                <div class="buysell-title text-center">
+                                    <h2 class="title">Make a Deposit !</h2>
+                                </div><!-- .buysell-title -->
+                                <div class="buysell-block">
+                                    <form method="POST" class="buysell-form">
+
+                                        <div class="buysell-field form-group">
+                                            <div class="form-label-group">
+                                                <label class="form-label" for="buysell-amount">Amount to Deposit</label>
+                                            </div>
+
+
+
+                                            <div class="form-control-group">
+                                                <input type="text" class="form-control form-control-lg form-control-number" name="deposit_amount" placeholder="200.00" required>
+                                                <div class="form-dropdown">
+                                                    <div class="text">USD</div>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="form-note-group">
+                                                <span class="buysell-min form-note-alt">Minimum: 10.00 USD</span>
+                                                <span class="buysell-rate form-note-alt">1 USD = 0.00004435 BTC</span>
+                                            </div>
+                                        </div><!-- .buysell-field -->
+
+                                        <div class="buysell-field form-group">
+                                            <div class="form-label-group">
+                                                <label class="form-label">Select a payment method </label>
+                                            </div>
+                                            <input type="hidden" value="btc" name="bs-currency" id="buysell-choose-currency">
+                                            <div class="dropdown buysell-cc-dropdown">
+                                                <a href="#" class="buysell-cc-choosen dropdown-indicator" data-toggle="dropdown">
+                                                    <div class="coin-item coin-btc">
+                                                        <div class="coin-icon">
+                                                            <em class="icon ni ni-sign-btc-alt"></em>
+                                                        </div>
+                                                        <div class="coin-info">
+                                                            <span class="coin-name">select coin</span>
+                                                            <span class="coin-text">bc1xxxx......</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-auto dropdown-menu-mxh">
+                                                    <ul class="buysell-cc-list">
+
+
+                                                    	{% for i in wal %}
+                                                 <li class="buysell-cc-item selected">
+                                                           <a href="{% url 'userurl:payment' i.slug %}" class="buysell-cc-opt" data-currency="btc">
+                                                                <div class="coin-item coin-btc">
+                                                                    <div class="coin-icon">
+                                                                        <em class="icon"><img src="{{i.image.url}}" width="30" alt=""></em>
+                                                                    </div>
+                                                                    <div class="coin-info">
+                                                                        <span class="coin-name">{{i.name}}</span>
+                                                                        <span class="coin-text">
+                                                                        	{{i.wallet}}
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        {% endfor %}
+                                                    	
+                                               
+                                                    	
+
+
+
+                                                    </ul>
+                                                </div><!-- .dropdown-menu -->
+                                            </div><!-- .dropdown -->
+                                        </div>
+                                        <!-- .buysell-field -->
+
+
+                                        <div class="buysell-field form-action">
+                                           <a href="/deposit/5347154346" title=""> <button type="submit" class="btn btn-lg btn-block btn-primary">Continue to Deposit</button></a>
+                                        </div><!-- .buysell-field -->
+                                        <!-- .buysell-field -->
+
+
+                                   
+
+
+
+                                        <input type="hidden" name="csrfmiddlewaretoken" value="ipCAfgztqctjTb1CxgCtgKNnAEjsJwc4VO9ms5IspqKCPUFqEC7Nj199KfXy4mNY">
+                                        <div class="form-note text-base text-center">Note: our transfer fee included .</div>
+                                    </form><!-- .buysell-form -->
+
+
+
+
+                                </div><!-- .buysell-block -->
+                            </div><!-- .buysell -->
+                        </div>
+                    </div>
+                </div>
+                <!-- content @e -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+
+    
+
+
+</body>
+
+{% endblock content %}

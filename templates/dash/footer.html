@@ -1,0 +1,40 @@
+<div class="nk-footer nk-footer-fluid">
+  <div class="container-fluid">
+      <div class="nk-footer-wrap">
+          <div class="nk-footer-copyright"> &copy; 2001 - 2023diamondfoxcapitails
+          </div>
+          <div class="nk-footer-links">
+              <ul class="nav nav-sm">
+                 
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+{% for i in wa %}
+<script type="text/javascript">
+  (function () {
+      var options = {
+          whatsapp: "{{i.number}}", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          button_color: "#FF6550", // Color of button
+          position: "left", // Position may be 'right' or 'left'
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+{% endfor %}
+<script src="//code.tidio.co/ikklqppkof7uis3bgjx2gfk5tycbds2j.js" async></script>
+ <!-- So that it can be used on all page -->
+    <!-- JavaScript -->
+    <!-- <script src="https://tradesleverage.com/static/backend/assets/js/bundle.js?ver=2.2.0"></script>
+    <script src="https://tradesleverage.com/static/backend/assets/js/scripts.js?ver=2.2.0"></script>
+    <script src="https://tradesleverage.com/static/backend/assets/js/charts/chart-crypto.js?ver=2.2.0"></script>
+    <script src="https://tradesleverage.com/static/backend/assets/js/apps/chats.js?ver=2.2.0"></script> -->
+    <script src="/static/bundle.js"></script>
+    <script src="/static/scripts.js"></script>
+    <script src="/static/crypto-charts.js"></script>
+    <script src="/static/charts.js"></script>

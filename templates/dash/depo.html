@@ -1,0 +1,132 @@
+
+
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+                <div class="nk-content nk-content-fluid">
+                    <div class="container-xl wide-lg">
+                        <div class="nk-content-body">
+                            <div class="buysell wide-xs m-auto">
+                                <div class="buysell-nav text-center">
+                                    
+                                </div><!-- .buysell-nav -->
+                                <div class="buysell-title text-center">
+                                    <h2 class="title">{{data.name}} payment details !</h2>
+                                </div><!-- .buysell-title -->
+                                <div class="buysell-block">
+
+
+
+    <div class="buysell-field form-group" style="text-align: center;">
+        <img src="{{data.image.url}}" alt=""> 
+      </div>
+
+
+
+      <div class="buysell-field form-group">
+         <label for="deposit_amount" class="">{{data.name}} Wallet Address (Click To Copy)</label>
+         <input class="form-control" id="myInput" value="{{data.wallet}}" type="text"  autocomplete="off" readonly onclick="myFunction()" onmouseout="outFunc()">
+      </div>
+
+
+
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+
+
+                                    <form method="POST" class="buysell-form" action="" accept-charset="utf-8" enctype="multipart/form-data" >
+                                        {% csrf_token %}
+                                        {% include 'messages.html' %}
+                                        
+                                        <!-- .buysell-field -->
+                                        <div class="buysell-field form-group">
+                                        
+                                            
+
+<div id="div_id_amount" class="form-group"> <label for="id_amount" class=" requiredField">
+                Amount<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="price" step="0.01" class="numberinput form-control" required id="id_amount"> </div> </div> <div id="div_id_payment_proof" class="form-group"> <label for="id_payment_proof" class=" requiredField">
+                Payment proof<span class="asteriskField">*</span> </label> <div class=""> <input type="file" name="image" accept="image/*" class="clearablefileinput form-control-file" required id="id_payment_proof"> </div> </div> <div id="div_id_transaction_id" class="form-group"> <label for="id_transaction_id" class=" requiredField">
+               
+                                        </div><!-- .buysell-field -->
+                                        <input type="hidden" name="name" value="{{data.name}}">
+                                        <input type="hidden" name="wallet" value="{{data.wallet}}">
+                                        <input type="hidden" name="user" value="{{user.username}}">
+                                        <!-- .buysell-field -->
+                                        <div class="buysell-field form-action">
+                                            <button type="submit" class="btn btn-lg btn-block btn-primary">SEND</button>
+                                        </div><!-- .buysell-field -->
+                                        
+                                    </form><!-- .buysell-form -->
+                                </div><!-- .buysell-block -->
+                            </div><!-- .buysell -->
+                        </div>
+                    </div>
+                </div>
+                <!-- content @e -->
+
+
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+               
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+
+</body>
+
+{% endblock content %}

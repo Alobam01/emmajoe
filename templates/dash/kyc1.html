@@ -1,0 +1,133 @@
+
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+<div class="nk-content nk-content-fluid">
+    <div class="container-xl wide-lg">
+            <div class="nk-content-body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- content @s -->
+                <div class="nk-content nk-content-fluid">
+                    <div class="container-xl wide-lg">
+                        <div class="nk-content-body">
+                            <div class="kyc-app wide-sm m-auto">
+                                <div class="nk-block-head nk-block-head-lg wide-xs mx-auto">
+                                    <div class="nk-block-head-content text-center">
+                                        <h2 class="nk-block-title fw-normal">KYC Verification</h2>
+                                        <div class="nk-block-des">
+                                            <p>To comply with regulation each participant will have to go through identity verification (KYC/AML) to prevent fraud causes. </p>
+                                        </div>
+                                    </div>
+                                </div><!-- nk-block-head -->
+                                <div class="nk-block">
+                                    <div class="card card-bordered">
+                                        <div class="card-inner card-inner-lg">
+                                            <div class="nk-kyc-app p-sm-2 text-center">
+                                                <div class="nk-kyc-app-icon">
+                                                    <em class="icon ni ni-files"></em>
+                                                </div>
+                                                <div class="nk-kyc-app-text mx-auto">
+                                                    <p class="lead">If you have not submitted your necessary documents to verify your identity. In order to be able to withdraw funds, please verify your identity.</p>
+                                                </div>
+                                                <div class="nk-kyc-app-action">
+                                                    <a href="/user/mykyc/" class="btn btn-lg btn-primary">Click here to complete your KYC</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center pt-4">
+                                        <p>If you have any question, please contact our support team <a href="/contact/">support@Seapaltrading.com</a></p>
+                                    </div>
+                                </div><!-- nk-block -->
+                            </div><!-- kyc-app -->
+                        </div>
+                    </div>
+                </div>
+                <!-- content @e -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+    </div>
+</div>
+<!-- content @e -->
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+             
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+
+    
+
+   
+
+</body>
+
+{% endblock content %}

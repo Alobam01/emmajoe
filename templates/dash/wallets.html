@@ -1,0 +1,220 @@
+
+
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+<div class="nk-content nk-content-fluid">
+    <div class="container-xl wide-lg">
+            <div class="nk-content-body">
+
+
+
+
+                            <div class="buysell wide-xs m-auto">
+                                <div class="buysell-nav text-center">
+                                    
+                                </div><!-- .buysell-nav -->
+                                <div class="buysell-title text-center">
+                                    <h2 class="title">Add Wallet to Withdraw</h2>
+                                </div><!-- .buysell-title -->
+                                <div class="buysell-block">
+
+
+                                    <form method="POST" action="" class="buysell-form">
+                                        {% csrf_token %}
+                                        {% include 'messages.html' %}
+                                        
+
+                                        <!-- .buysell-field -->
+                                        <div class="buysell-field form-group">
+                                        
+                                            
+
+<div id="div_id_wallet_name" class="form-group"> <label for="id_wallet_name" class=" requiredField">
+                Wallet name<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="50" class="textinput textInput form-control" required id="id_wallet_name"> </div> </div> <div id="div_id_wallet_address" class="form-group"> <label for="id_wallet_address" class=" requiredField">
+                Wallet address<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="wal" maxlength="250" class="textinput textInput form-control" required id="id_wallet_address"> </div> </div>
+
+                                        </div><!-- .buysell-field -->
+                                       
+                                        <!-- .buysell-field -->
+                                        <div class="buysell-field form-action">
+                                            <button type="submit" class="btn btn-lg btn-block btn-primary" name="add">ADD</button>
+                                        </div><!-- .buysell-field -->
+                                        
+                                    </form><!-- .buysell-form -->
+                                </div><!-- .buysell-block -->
+                            </div><!-- .buysell -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="nk-block-head nk-block-head-sm">
+                                <div class="nk-block-between g-3">
+                                    <div class="nk-block-head-content">
+                                        <h3 class="nk-block-title page-title">Wallet Added </h3>
+                                        
+                                    </div><!-- .nk-block-head-content -->
+                                    
+                                </div><!-- .nk-block-between -->
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="card card-bordered card-stretch">
+                                    <div class="card-inner-group">
+                                    
+
+                                        <div class="card-inner p-0">
+                                            <table class="table table-tranx">
+                                                <thead>
+                                                    <tr class="tb-tnx-head">
+                                                        <th class="tb-tnx-id"><span class="">Wallet Name</span></th>
+                                                        <th class="tb-tnx-info">
+                                                            <span class="tb-tnx-desc d-none d-sm-inline-block">
+                                                                <span>Wallet Address</span>
+                                                            </span>
+                                                            <span class="tb-tnx-date d-md-inline-block d-none">
+                                                                <span class="d-md-none">Date</span>
+                                                                <span class="d-none d-md-block">
+                                                                    <span>Date Added</span>
+                                                                </span>
+                                                            </span>
+                                                        </th>
+                                                       
+                                                        
+                                                    </tr><!-- tb-tnx-item -->
+                                                </thead>
+                                                <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    
+                                                        {% for i in wallet %}
+                                                    <tr style="text-align: center;">
+                                                        <td >
+                                                           {{i.name}}
+                                                        </td>
+                                                        <td >
+                                                            {{i.wallet}}
+                                                         </td>
+                                                         <td >
+                                                            {{i.created}}
+                                                         </td>
+                                                        
+                                                    </tr><!-- tb-tnx-item -->
+                                                    {% endfor %}
+                                                    
+                                                    
+
+
+                                                </tbody>
+                                            </table>
+                                        </div><!-- .card-inner -->
+                                        
+                                    </div><!-- .card-inner-group -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+    </div>
+</div>
+<!-- content @e -->
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+            
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+
+    
+
+
+</body>
+
+{% endblock content %}

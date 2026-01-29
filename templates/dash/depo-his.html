@@ -1,0 +1,158 @@
+
+
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+<div class="nk-content nk-content-fluid">
+    <div class="container-xl wide-lg">
+            <div class="nk-content-body">
+
+
+
+
+
+
+                            <div class="nk-block-head nk-block-head-sm">
+                                <div class="nk-block-between g-3">
+                                    <div class="nk-block-head-content">
+                                        <h3 class="nk-block-title page-title">Deposit History</h3>
+                                        <div class="nk-block-des text-soft">
+                                            <p>You have total 0 deposit.</p>
+                                        </div>
+                                    </div><!-- .nk-block-head-content -->
+                                    
+                                </div><!-- .nk-block-between -->
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="card card-bordered card-stretch">
+                                    <div class="card-inner-group">
+                                        <div class="card-inner">
+                                            <div class="card-title-group">
+                                                <div class="card-title">
+                                                    <h5 class="title">All Deposit</h5>
+                                                </div>
+                                               
+                                            </div><!-- .card-title-group -->
+                                        </div><!-- .card-inner -->
+                                        <div class="card-inner p-0">
+                                            <table class="table table-tranx">
+                                                <thead>
+                                                    <tr class="tb-tnx-head">
+                                                        <th class="tb-tnx-id"><span class="">Trans ID</span></th>
+                                                        <th class="tb-tnx-info">
+                                                            <span class="tb-tnx-desc d-none d-sm-inline-block">
+                                                                <span>Paid Through</span>
+                                                            </span>
+                                                            <span class="tb-tnx-date d-md-inline-block d-none">
+                                                                <span class="d-md-none">Date</span>
+                                                                <span class="d-none d-md-block">
+                                                                    <span>Date</span>
+                                                                </span>
+                                                            </span>
+                                                        </th>
+                                                        <th class="tb-tnx-amount is-alt">
+                                                            <span class="tb-tnx-total">Amount</span>
+                                                            <span class="tb-tnx-status d-none d-md-inline-block">Status</span>
+                                                        </th>
+                                                        
+                                                    </tr><!-- tb-tnx-item -->
+                                                </thead>
+                                                <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                	
+                                                	    
+													<tr style="text-align: center;">
+                                                        <td >
+                                                            <span >No Data Found</span>
+                                                        </td>
+                                                        
+                                                    </tr><!-- tb-tnx-item -->
+                                                	
+                                                    
+
+
+                                                </tbody>
+                                            </table>
+                                        </div><!-- .card-inner -->
+                                        
+                                    </div><!-- .card-inner-group -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+    </div>
+</div>
+<!-- content @e -->
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+           
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->  
+
+
+</body>
+{% endblock content %}

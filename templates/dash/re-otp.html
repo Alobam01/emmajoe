@@ -1,0 +1,133 @@
+
+
+
+
+{% extends 'dash/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<body class="nk-body npc-crypto bg-white has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- sidebar @s -->
+            
+
+
+<!-- sidebar @s -->
+{% include 'dash/side.html' %}
+            <!-- sidebar @e -->
+            <!-- sidebar @e -->
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                
+                <!-- main header @s -->
+                
+
+
+                {% include 'dash/head.html' %}
+                <!-- main header @e -->
+                <!-- main header @e -->
+
+                
+                    
+<!-- content @s -->
+                <div class="nk-content nk-content-fluid">
+                    <div class="container-xl wide-lg">
+                        <div class="nk-content-body">
+
+
+
+
+
+
+                            <div class="buysell wide-xs m-auto">
+                                <div class="buysell-nav text-center">
+                                </div><!-- .buysell-nav -->
+                                <div class="buysell-title text-center">
+                                    <h2 class="title">[[ Balance  {{user.accountbalance}} USD ]] </h2>
+                                     <!-- <center> Demo Account </center> -->
+                                </div><!-- .buysell-title -->
+                                <div class="buysell-block">
+
+                                    
+                                     
+
+
+                                    <form method="POST" action="" class="buysell-form">
+                                        {% csrf_token %}
+                                        {% include 'messages.html' %}
+                                        
+
+                                        <!-- .buysell-field -->
+                                        <div class="buysell-field form-group">
+                                            
+
+<div id="div_id_amount" class="form-group"> <label for="id_amount" class=" requiredField">
+                Pin<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="pin"  class="numberinput form-control" required id="id_amount"> </div> </div>
+
+                                        </div><!-- .buysell-field -->
+                                        
+                                        <!-- .buysell-field -->
+
+                                        
+                                        <div class="buysell-field form-action">
+                                            <button type="submit" class="btn btn-lg btn-block btn-primary" >WITHDRAW</button>
+                                        </div><!-- .buysell-field -->
+                                                                                    
+
+
+                                        
+                                    </form><!-- .buysell-form -->
+                                </div><!-- .buysell-block -->
+                            </div><!-- .buysell -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- content @e -->
+
+
+
+
+                
+                <!-- footer @s -->
+                
+                <!-- footer @s -->
+               
+                <!-- footer @e -->
+                <!-- footer @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+
+    
+
+</body>
+
+{% endblock content %}
